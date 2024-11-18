@@ -28,6 +28,7 @@ fhrp version vrrp v3
 !
 !
 ip routing
+ip dhcp relay information trust-all
 !
 !
 !
