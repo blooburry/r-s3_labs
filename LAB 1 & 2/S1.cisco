@@ -1,0 +1,214 @@
+Current configuration : 1721 bytes
+!
+! Last configuration change at 01:28:30 UTC Mon Mar 1 1993
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname S1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+username blooburry privilege 15 secret cisco
+enable secret class
+aaa new-model
+aaa authentication login default local 
+aaa authorization exec default loca
+system mtu routing 1500
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+vlan 10 
+vlan 999
+ name BLACKHOLE
+vlan 800
+ name NATIVE
+!
+!
+!
+!
+!
+!
+interface Port-channel1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk native vlan 800
+ switchport trunk allowed vlan remove 800
+ ip dhcp snooping trust
+!
+interface Port-channel2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk native vlan 800
+ switchport trunk allowed vlan remove 800
+ ip dhcp snooping trust
+!
+interface FastEthernet0/1
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode active
+!
+interface FastEthernet0/2
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode active
+!
+interface FastEthernet0/3
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 2 mode active
+!
+interface FastEthernet0/4
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 2 mode active
+!
+interface FastEthernet0/5
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/6
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/7
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/8
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/9
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/10
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/11
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/12
+ switchport mode access
+ switchport access vlan 10
+ switchport port-security
+ switchport port-security mac-address 0000.0000.0000.0008
+ switchport port-security maximum 1
+ switchport port-security violation shutdown
+ ip dhcp snooping limit rate 20 
+!
+interface FastEthernet0/13
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/14
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/15
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/16
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/17
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/18
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/19
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/20
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/21
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/22
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/23
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface FastEthernet0/24
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface GigabitEthernet0/1
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface GigabitEthernet0/2
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan10
+ no ip address
+!
+ip http server
+ip http secure-server
+ip dhcp snooping 
+ip dhcp snooping vlan 10
+!
+no vstack
+!
+line con 0
+ login authentication default
+ authorization exec default
+line vty 5 15
+!
+end
