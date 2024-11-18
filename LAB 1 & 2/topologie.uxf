@@ -1,0 +1,37 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>340</x><y>70</y><w>100</w><h>30</h></coordinates><panel_attributes>R1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>230</y><w>140</w><h>80</h></coordinates><panel_attributes>MLS1
+--
+Po1: g1/0/1, g1/0/2
+Po2: g1/0/3, g1/0/4
+Po3: g1/0/23, g1/0/24</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>230</y><w>140</w><h>80</h></coordinates><panel_attributes>MLS2
+--
+Po1: g1/0/1, g1/0/2
+Po2: g1/0/3, g1/0/4
+Po3: g1/0/23, g1/0/24</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>440</y><w>140</w><h>70</h></coordinates><panel_attributes>S1
+-
+Po1: f0/1, f0/2
+Po2: f0/3, f0/4</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>440</y><w>140</w><h>70</h></coordinates><panel_attributes>S2
+-
+Po1: f0/1, f0/2
+Po2: f0/3, f0/4</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>80</x><y>600</y><w>120</w><h>40</h></coordinates><panel_attributes>PC1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>610</x><y>600</y><w>120</w><h>40</h></coordinates><panel_attributes>PC2</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>90</y><w>260</w><h>160</h></coordinates><panel_attributes>lt=-
+m1=g1/0/13: 192.168.0.1
+m2=g0/0/0: 192.168.0.2
+
+192.168.0.0/30</panel_attributes><additional_attributes>10;140;240;10</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>90</y><w>290</w><h>160</h></coordinates><panel_attributes>lt=-
+m1=g1/0/13: 192.168.0.6
+m2=g0/0/0: 192.168.0.5
+
+192.168.0.0/30</panel_attributes><additional_attributes>270;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>230</y><w>420</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=Po3:192.168.1.1
+m2=Po3:192.168.1.2
+
+192.168.1.0/30</panel_attributes><additional_attributes>10;20;400;20</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>300</y><w>90</w><h>160</h></coordinates><panel_attributes>lt=-
+m1=Po1: trunk
+m2=Po1: trunk</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>300</y><w>420</w><h>160</h></coordinates><panel_attributes>lt=-
+m1=Po2: trunk
+m2=Po2: trunk</panel_attributes><additional_attributes>10;10;400;140</additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>300</y><w>90</w><h>160</h></coordinates><panel_attributes>lt=-
+m1=Po1: trunk
+m2=Po1: trunk</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>300</y><w>420</w><h>160</h></coordinates><panel_attributes>lt=-
+m1=Po2: trunk
+m2=Po2: trunk</panel_attributes><additional_attributes>10;140;400;10</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>500</y><w>150</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=f0/12: access VLAN 10</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>500</y><w>150</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=f0/12: access VLAN 20</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element></diagram>

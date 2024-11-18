@@ -14,7 +14,7 @@
 
 4. Hoe controleer je dat de “load-balancing” over de MLSen m.b.v.STP correct geconfigureerd is?
 
-> Met het commando `> show spanning-tree interface`
+> Met het commando `> show spanning-tree interface`.
 
 5. Waartoe dient interface tracking bij VRRP?
 
