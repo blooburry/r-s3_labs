@@ -116,17 +116,17 @@ interface FastEthernet0/11
 !
 interface FastEthernet0/12
  switchport mode access
- switchport access vlan 10
- switchport port-security
- switchport port-security mac-address 0000.0000.0000.0008
- switchport port-security maximum 1
- switchport port-security violation shutdown
- ip dhcp snooping limit rate 20 
+ switchport access vlan 999
+ shutdown
 !
 interface FastEthernet0/13
  switchport mode access
- switchport access vlan 999
- shutdown
+ switchport access vlan 10
+ switchport port-security
+ switchport port-security mac-address 3C49.3705.B668
+ switchport port-security maximum 1
+ switchport port-security violation shutdown
+ ip dhcp snooping limit rate 20 
 !
 interface FastEthernet0/14
  switchport mode access

@@ -111,9 +111,11 @@ policy-map system-cpp-policy
 !
 interface Port-channel1
  switchport mode trunk
+ switchport trunk native vlan 800
 !
 interface Port-channel2
  switchport mode trunk
+ switchport trunk native vlan 800
 !
 interface Port-channel3
  no switchport
