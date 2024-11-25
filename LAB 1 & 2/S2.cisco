@@ -38,9 +38,13 @@ vlan internal allocation policy ascending
 !
 interface Port-channel1
  switchport mode trunk
+ switchport trunk native vlan 800
+ switchport trunk allowed vlan remove 800
 !
 interface Port-channel2
  switchport mode trunk
+ switchport trunk native vlan 800
+ switchport trunk allowed vlan remove 800
 !
 interface FastEthernet0/1
  switchport mode trunk
